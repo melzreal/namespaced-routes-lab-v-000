@@ -3,11 +3,9 @@ class CreatePreferences < ActiveRecord::Migration
     create_table :preferences do |t|
       t.string :artist_sort_order
       t.string :song_sort_order
-      t.string :allow_create_artists
-      t.string :boolean
-      t.string :allow_create_songs
-      t.string :boolean
-
+      t.boolean :allow_create_artists
+      t.boolean :allow_create_songs
+    
       t.timestamps null: false
     end
   end
